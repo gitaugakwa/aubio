@@ -12,10 +12,16 @@ project "Aubio"
 		"src/cvec.c",
 		"src/fmat.c",
 		"src/fvec.c",
-    "src/lvec.c",
+		"src/lvec.c",
 		"src/mathutils.c",
 		"src/musicutils.c",
 		"src/vecutils.c"
+	}
+
+	defines
+	{
+		"HAVE_C99_VARARGS_MACROS",
+		"HAVE_STDLIB_H"
 	}
 
 	filter "system:windows"
