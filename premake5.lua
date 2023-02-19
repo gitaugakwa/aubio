@@ -5,23 +5,25 @@ project "Aubio"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	includedirs
+	{
+		"src"
+	}
+
 	files
 	{
 		"src/aubio.h",
 		"src/aubio_priv.h",
-		"src/cvec.c",
-		"src/fmat.c",
-		"src/fvec.c",
-		"src/lvec.c",
-		"src/mathutils.c",
-		"src/musicutils.c",
-		"src/vecutils.c"
+		"src/**/*.c"
 	}
 
 	defines
 	{
 		"HAVE_C99_VARARGS_MACROS",
-		"HAVE_STDLIB_H"
+		"HAVE_STDLIB_H",
+		"HAVE_STDIO_H",
+		"HAVE_STDARG_H",
+		"HAVE_MATH_H"
 	}
 
 	filter "system:windows"
