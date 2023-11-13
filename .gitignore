@@ -52,3 +52,14 @@ python/tests/sounds
 aubio.egg-info
 .eggs
 .cache
+
+
+.vs/
+.vscode/
+bin/
+bin-int/
+
+
+*.sln
+*.vcxproj
+*.vcxproj.*
